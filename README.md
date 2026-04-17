@@ -4,7 +4,7 @@ Recent CS grad with a focus on backend and distributed systems. I care about cor
 
 Looking for backend or data-adjacent roles in the **BC Interior** (West Kootenays / Okanagan) or remote positions open to BC-based candidates.
 
-## Tech I am comfortable working with
+## Tech I am familiar with
 
 **Languages**
 <br>
@@ -65,7 +65,7 @@ A full-stack web application built for a real client (my brother's farrier busin
 ### Human–Food Interaction Research
 Two-semester independent research project on how people interact with food through technology. Accepted as a [poster presenter at GI'25(Graphics Interface 2025)](https://graphicsinterface.org/), the longest-running conference in computer graphics and HCI in Canada.
 
-→ [Read the paper](https://aidanslomanportfolio.wordpress.com/my-research-paper-in-human-food-interaction-hfi/)
+→ [Download the PDF](https://aidanslomanportfolio.wordpress.com/wp-content/uploads/2026/04/bites-and-bytes_cpsc502.pdf)
 
 ---
 
