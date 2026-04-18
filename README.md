@@ -15,6 +15,8 @@ Looking for backend or data-adjacent roles in the **BC Interior** (West Kootenay
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![Haskell](https://img.shields.io/badge/Haskell-5D4F85?style=flat&logo=haskell&logoColor=white)
+![XML](https://img.shields.io/badge/XML-005FAD?style=flat&logo=xml&logoColor=white)
+
 
 **Backend & Data**
 <br>
@@ -47,7 +49,7 @@ A fault-tolerant, horizontally scalable chat platform built in Java (JDK 21), de
 
 Originally a group university project (CPSC 559 — Distributed Systems). I owned the Addressing Server module and the full inter-process communication protocol. After the course ended I invested 60+ hours in a personal fork, resolving bugs in leader election and failover recovery.
 
-`Java` `JDK 21` `Java NIO` `Docker` `Distributed Systems`
+`Java` `JDK 21` `Java NIO` `Docker` `Gradle` `Distributed Systems`
 
 → [View repo](https://github.com/calderslom/distributed-chat)
 
