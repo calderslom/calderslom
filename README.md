@@ -45,9 +45,12 @@ Looking for backend or data-adjacent roles in the **BC Interior** (West Kootenay
 
 ### Distributed IRC-Style Chat System
 
-A fault-tolerant, horizontally scalable chat platform built in Java (JDK 21), deployed via Docker. Features gossip-based message replication with vector timestamp ordering, a Primary/Replica addressing layer with automatic leader election, and non-blocking NIO sockets for high client concurrency. Clients reconnect and resync automatically on failure — no operator intervention required.
+A fault-tolerant and scalable chat system built in Java (JDK 21) and deployed via Docker. The platform features gossip-based message replication with vector timestamp ordering, dynamic client routing, and automatic failure recovery through a Primary/Replica addressing layer. The system is designed to be "operator-free" allowing nodes to scale horizontally and integrate into the live network without manual configuration, while clients automatically reconnect and resync upon server failure.
 
-Originally a group university project (CPSC 559 — Distributed Systems). I owned the Addressing Server module and the full inter-process communication protocol. After the course ended I invested 60+ hours in a personal fork, resolving bugs in leader election and failover recovery.
+Originally developed as a university group project (CPSC 559), I designed the custom IPC protocol used to coordinate state synchronization an service discovery between chat servers, primary addressing nodes, and replicas. The Primary/Replica addressing layer uses synchronous replication and a Bully-based leader election algorithm to enforce state integrity and prevent data loss during failover. To manage high client concurrency, I developed the networking layer using Java NIO with non-blocking, selector-based socket handling.
+
+Post-submission, I branched the repository and independently invested 60+ hours stabilizing the system. My refinements focused on resolving fundamental bugs in leader election and failover recovery, in addition to migrating to Docker’s internal DNS and implementing dynamic service discovery. This stabilized the system, automated horizontal scaling, and eliminated dependencies on hardcoded IPs.
+
 
 `Java` `JDK 21` `Java NIO` `Docker` `Gradle` `Distributed Systems`
 
@@ -56,7 +59,14 @@ Originally a group university project (CPSC 559 — Distributed Systems). I owne
 ---
 
 ### Farrier Business Database & Web App
-A full-stack web application built for a real client (my brother's farrier business). Manages client records, horse profiles, invoices, visit history, and photos. Built with PHP, HTML, and MySQL on Apache.
+A full-stack CRUD application for a Farrier to manage their clients, horses, and records, including medical history, shoeing protocols, and invoices. I designed the database schema in collaboration with a real business owner, translating his professional requirements into a structured 3NF model that supports both the practitioner and their clients.
+
+The backend logic was built using PHP and MySQL, utilizing stored procedures for automated workflows and triggers to enforce consistent user provisioning and data integrity so that the system requires less direct maintenance. 
+
+Originally developed as a group-project, I made the following improvements post submission:
+- Refactored core features to meet evolving client needs by replacing external image dependencies with local storage and redesigned invoicing to support dynamic line items.
+- Modernized the system by containerizing the stack with Docker and automated database initialization to enable straightforward remote hosting (e.g. AWS ECS) and provided seed data and an injection script for testing and demonstration.
+
 
 `PHP` `MySQL` `Apache` `HTML` `Full Stack`
 
